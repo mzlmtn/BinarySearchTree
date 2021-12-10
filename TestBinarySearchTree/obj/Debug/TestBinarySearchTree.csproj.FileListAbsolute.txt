@@ -1,0 +1,10 @@
+D:\YAZILIMLAR\C#\TestBinarySearchTree\bin\Debug\TestBinarySearchTree.exe.config
+D:\YAZILIMLAR\C#\TestBinarySearchTree\bin\Debug\TestBinarySearchTree.exe
+D:\YAZILIMLAR\C#\TestBinarySearchTree\bin\Debug\TestBinarySearchTree.pdb
+D:\YAZILIMLAR\C#\TestBinarySearchTree\obj\Debug\TestBinarySearchTree.csprojAssemblyReference.cache
+D:\YAZILIMLAR\C#\TestBinarySearchTree\obj\Debug\TestBinarySearchTree.Form1.resources
+D:\YAZILIMLAR\C#\TestBinarySearchTree\obj\Debug\TestBinarySearchTree.Properties.Resources.resources
+D:\YAZILIMLAR\C#\TestBinarySearchTree\obj\Debug\TestBinarySearchTree.csproj.GenerateResource.cache
+D:\YAZILIMLAR\C#\TestBinarySearchTree\obj\Debug\TestBinarySearchTree.csproj.CoreCompileInputs.cache
+D:\YAZILIMLAR\C#\TestBinarySearchTree\obj\Debug\TestBinarySearchTree.exe
+D:\YAZILIMLAR\C#\TestBinarySearchTree\obj\Debug\TestBinarySearchTree.pdb

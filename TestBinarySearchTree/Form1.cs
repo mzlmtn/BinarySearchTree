@@ -28,39 +28,64 @@ namespace TestBinarySearchTree
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Node r = new Node();
-            r.Value = Numbers[0];
-            _TREE = new Tree(r);
-            for (int i = 1; i < Numbers.Count; i++)
+            if (Numbers.Count > 0)
             {
-                Node n = new Node { Value = Numbers[i] };
-                _TREE.AddValue(_TREE.Root, n);
+                Node r = new Node();
+                r.Value = Numbers[0];
+                _TREE = new Tree(r);
+                for (int i = 1; i < Numbers.Count; i++)
+                {
+                    Node n = new Node { Value = Numbers[i] };
+                    _TREE.AddValue(_TREE.Root, n);
+                }
+                _TREE.Root.Visit();
             }
-            _TREE.Root.Visit();
+            else
+            {
+                MessageBox.Show("First add some numbers!");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
-            listBox2.Items.Clear();
-            Numbers.Clear();
-            NumberCount = int.Parse(textBox1.Text);
-            Random rnd = new Random();
-            for (int i = 0; i < NumberCount; i++)
+            if (textBox1.Text.Length > 0)
             {
-                int num = rnd.Next(0, 999999);
-                Numbers.Add(num);
-                listBox1.Items.Add(num);
+                listBox1.Items.Clear();
+                listBox2.Items.Clear();
+                Numbers.Clear();
+                NumberCount = int.Parse(textBox1.Text);
+                if (NumberCount > 0)
+                {
+                    Random rnd = new Random();
+                    for (int i = 0; i < NumberCount; i++)
+                    {
+                        int num = rnd.Next(0, 9999);
+                        Numbers.Add(num);
+                        listBox1.Items.Add(num);
+                    }
+                    NumberCount = 20;
+                    textBox1.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Number count cannot be less than 0!");
+                }
             }
-            NumberCount = 20;
-            textBox1.Clear();
-            /*Numbers.Add(int.Parse(textBox1.Text));
-            listBox1.Items.Add(textBox1.Text);
-            textBox1.Clear();
-            button2.Focus();*/
+            else
+            {
+                MessageBox.Show("Number count cannot be 0!");
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, "[^0-9]"))
+            {
+                textBox1.Text = "";
+            }
         }
     }
-    
+
 
     public class Tree
     {
@@ -104,7 +129,7 @@ namespace TestBinarySearchTree
     public class Node
     {
         public Node Left, Right;
-        public int Value;
+        public int Value, X, Y;
 
         public Node Search(int val)
         {
